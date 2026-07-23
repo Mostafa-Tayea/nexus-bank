@@ -1,0 +1,323 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.mostafa:nexus-bank >-----------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.1.0:run (default-cli) > test-compile @ nexus-bank >>>
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ nexus-bank ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 11 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ nexus-bank ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 156 source files with javac [debug parameters release 21] to target\classes
+[INFO] /D:/java/nexus-bank/src/main/java/com/mostafa/nexus_bank/cache/service/JwtBlacklistService.java: Some input files use or override a deprecated API.
+[INFO] /D:/java/nexus-bank/src/main/java/com/mostafa/nexus_bank/cache/service/JwtBlacklistService.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ nexus-bank ---
+[INFO] skip non existing resourceDirectory D:\java\nexus-bank\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ nexus-bank ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] <<< spring-boot:4.1.0:run (default-cli) < test-compile @ nexus-bank <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.1.0:run (default-cli) @ nexus-bank ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-07-22T16:05:46.497+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] c.m.nexus_bank.NexusBankApplication      : Starting NexusBankApplication using Java 25.0.3 with PID 3892 (D:\java\nexus-bank\target\classes started by LOQ in D:\java\nexus-bank)
+2026-07-22T16:05:46.501+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] c.m.nexus_bank.NexusBankApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-07-22T16:05:46.536+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-22T16:05:46.538+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-22T16:05:47.202+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-22T16:05:47.207+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-22T16:05:47.325+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 9 JPA repository interfaces.
+2026-07-22T16:05:47.353+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-22T16:05:47.354+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-22T16:05:47.372+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.account.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:05:47.373+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.audit.repository.AuditRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:05:47.373+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.auth.repository.OtpCodeRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:05:47.373+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.auth.repository.RefreshTokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:05:47.373+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.auth.repository.VerificationTokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:05:47.373+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.notification.repository.NotificationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:05:47.373+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.role.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:05:47.374+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.transaction.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:05:47.374+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.user.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:05:47.375+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2026-07-22T16:05:47.799+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-22T16:05:47.810+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-22T16:05:47.813+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-22T16:05:47.843+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1305 ms
+2026-07-22T16:05:48.016+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-22T16:05:48.120+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55e7e175
+2026-07-22T16:05:48.123+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-22T16:05:48.143+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false (MySQL 8.0)
+2026-07-22T16:05:48.198+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 11 migrations (execution time 00:00.024s)
+2026-07-22T16:05:48.209+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `test`: 11
+2026-07-22T16:05:48.212+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.f.core.internal.command.DbMigrate      : Schema `test` is up to date. No migration necessary.
+2026-07-22T16:05:48.310+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-22T16:05:48.342+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-22T16:05:48.604+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-22T16:05:48.660+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: test/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-22T16:05:49.399+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-22T16:05:49.432+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-22T16:05:49.482+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-22T16:05:49.784+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2026-07-22T16:05:49.787+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-07-22T16:05:50.612+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-22T16:05:51.355+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-22T16:05:51.364+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] c.m.nexus_bank.NexusBankApplication      : Started NexusBankApplication in 5.111 seconds (process running for 5.416)
+2026-07-22T16:05:51.366+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-22T16:05:51.367+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-22T16:09:09.648+03:00  INFO 3892 --- [nexus-bank] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 200 class path changes (0 additions, 198 deletions, 2 modifications)
+2026-07-22T16:09:09.655+03:00  INFO 3892 --- [nexus-bank] [       Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-22T16:09:09.661+03:00  INFO 3892 --- [nexus-bank] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-22T16:09:09.674+03:00  INFO 3892 --- [nexus-bank] [       Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-22T16:09:09.678+03:00  INFO 3892 --- [nexus-bank] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-22T16:09:09.683+03:00  INFO 3892 --- [nexus-bank] [       Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-07-22T16:09:09.755+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] c.m.nexus_bank.NexusBankApplication      : Starting NexusBankApplication using Java 25.0.3 with PID 3892 (D:\java\nexus-bank\target\classes started by LOQ in D:\java\nexus-bank)
+2026-07-22T16:09:09.756+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] c.m.nexus_bank.NexusBankApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-07-22T16:09:09.869+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-22T16:09:09.870+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-22T16:09:09.872+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-07-22T16:09:09.876+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-22T16:09:09.876+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-22T16:09:09.877+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2026-07-22T16:09:09.929+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-22T16:09:09.931+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-22T16:09:09.931+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-22T16:09:09.943+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 186 ms
+2026-07-22T16:09:09.965+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-07-22T16:09:09.970+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23427d6f
+2026-07-22T16:09:09.970+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-07-22T16:09:09.971+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false (MySQL 8.0)
+2026-07-22T16:09:09.985+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 11 migrations (execution time 00:00.006s)
+2026-07-22T16:09:09.993+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `test`: 11
+2026-07-22T16:09:09.993+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.f.core.internal.command.DbMigrate      : Schema `test` is up to date. No migration necessary.
+2026-07-22T16:09:10.002+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-22T16:09:10.014+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-22T16:09:10.015+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: test/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-22T16:09:10.027+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-22T16:09:10.047+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-22T16:09:10.071+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-22T16:09:10.180+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 54c08f96-b4e8-40ff-9a6d-c43e9c2a2549
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-22T16:09:10.197+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-22T16:09:10.271+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-22T16:09:10.275+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] c.m.nexus_bank.NexusBankApplication      : Started NexusBankApplication in 0.54 seconds (process running for 200.698)
+2026-07-22T16:09:10.277+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-22T16:09:10.277+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-22T16:09:10.281+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   ServletWebSecurityAutoConfiguration.EnableWebSecurityConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ServletWebSecurityAutoConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - AnyNestedCondition 1 matched 2 did not; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'spring.security.user.password'; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'spring.security.user.name'; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured)
+      - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2026-07-22T16:09:14.010+03:00  INFO 3892 --- [nexus-bank] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 198 class path changes (198 additions, 0 deletions, 0 modifications)
+2026-07-22T16:09:14.015+03:00  INFO 3892 --- [nexus-bank] [       Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-22T16:09:14.020+03:00  INFO 3892 --- [nexus-bank] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-22T16:09:14.024+03:00  INFO 3892 --- [nexus-bank] [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-22T16:09:14.025+03:00  INFO 3892 --- [nexus-bank] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-07-22T16:09:14.027+03:00  INFO 3892 --- [nexus-bank] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-07-22T16:09:14.076+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] c.m.nexus_bank.NexusBankApplication      : Starting NexusBankApplication using Java 25.0.3 with PID 3892 (D:\java\nexus-bank\target\classes started by LOQ in D:\java\nexus-bank)
+2026-07-22T16:09:14.076+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] c.m.nexus_bank.NexusBankApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-07-22T16:09:14.222+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-22T16:09:14.223+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-22T16:09:14.250+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 9 JPA repository interfaces.
+2026-07-22T16:09:14.257+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-22T16:09:14.257+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-22T16:09:14.265+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.account.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:09:14.266+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.audit.repository.AuditRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:09:14.266+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.auth.repository.OtpCodeRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:09:14.266+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.auth.repository.RefreshTokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:09:14.266+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.auth.repository.VerificationTokenRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:09:14.267+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.notification.repository.NotificationRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:09:14.267+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.role.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:09:14.267+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.transaction.repository.TransactionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:09:14.267+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.mostafa.nexus_bank.user.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-07-22T16:09:14.268+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2026-07-22T16:09:14.360+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-22T16:09:14.362+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-22T16:09:14.363+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-22T16:09:14.375+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 298 ms
+2026-07-22T16:09:14.418+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-07-22T16:09:14.423+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3012a809
+2026-07-22T16:09:14.424+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-07-22T16:09:14.425+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false (MySQL 8.0)
+2026-07-22T16:09:14.439+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 11 migrations (execution time 00:00.006s)
+2026-07-22T16:09:14.448+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `test`: 11
+2026-07-22T16:09:14.448+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.f.core.internal.command.DbMigrate      : Schema `test` is up to date. No migration necessary.
+2026-07-22T16:09:14.483+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-22T16:09:14.498+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-22T16:09:14.501+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: test/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-22T16:09:14.631+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-22T16:09:14.640+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-22T16:09:14.783+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2026-07-22T16:09:14.785+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-07-22T16:09:14.969+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-22T16:09:15.206+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-22T16:09:15.211+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] c.m.nexus_bank.NexusBankApplication      : Started NexusBankApplication in 1.148 seconds (process running for 205.634)
+2026-07-22T16:09:15.212+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-07-22T16:09:15.212+03:00  WARN 3892 --- [nexus-bank] [  restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-07-22T16:09:15.213+03:00  INFO 3892 --- [nexus-bank] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   RedisConfig#redisTemplate:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.data.redis.connection.RedisConnectionFactory; SearchStrategy: all) did not find any beans of type org.springframework.data.redis.connection.RedisConnectionFactory (OnBeanCondition)
+
+   ServletWebSecurityAutoConfiguration.EnableWebSecurityConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   ServletWebSecurityAutoConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' customUserDetailsService and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' daoAuthenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
+         - AnyNestedCondition 1 matched 2 did not; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'spring.security.user.password'; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'spring.security.user.name'; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
