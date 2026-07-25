@@ -183,7 +183,7 @@ public class AccountController {
         return ResponseEntity.ok(ApiResponse.success("Accounts fetched successfully", response));
     }
 
-    @PutMapping("/{id}/freeze")
+    @PatchMapping("/{id}/freeze")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
             summary = "Freeze an account",
@@ -216,7 +216,7 @@ public class AccountController {
         return ResponseEntity.ok(ApiResponse.success("Account frozen successfully", response));
     }
 
-    @PutMapping("/{id}/close")
+    @PatchMapping("/{id}/close")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
             summary = "Close an account",

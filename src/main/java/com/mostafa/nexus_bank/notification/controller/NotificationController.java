@@ -149,7 +149,7 @@ public class NotificationController {
         return ResponseEntity.ok(ApiResponse.success("Unread notifications fetched successfully", response));
     }
 
-    @PutMapping("/{id}/read")
+    @PatchMapping("/{id}/read")
     @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER', 'EMPLOYEE')")
     @Operation(
             summary = "Mark notification as read",
@@ -188,7 +188,7 @@ public class NotificationController {
         return ResponseEntity.ok(ApiResponse.success("Notification marked as read"));
     }
 
-    @PutMapping("/read-all")
+    @PatchMapping("/read-all")
     @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER', 'EMPLOYEE')")
     @Operation(
             summary = "Mark all notifications as read",

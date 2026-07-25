@@ -27,6 +27,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -238,7 +239,7 @@ public class UserController {
         return ResponseEntity.ok(ApiResponse.success("User deleted successfully"));
     }
 
-    @PutMapping("/{id}/lock")
+    @PatchMapping("/{id}/lock")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
             summary = "Lock a user account",
@@ -270,7 +271,7 @@ public class UserController {
         return ResponseEntity.ok(ApiResponse.success("User locked successfully", response));
     }
 
-    @PutMapping("/{id}/unlock")
+    @PatchMapping("/{id}/unlock")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
             summary = "Unlock a user account",
@@ -302,7 +303,7 @@ public class UserController {
         return ResponseEntity.ok(ApiResponse.success("User unlocked successfully", response));
     }
 
-    @PutMapping("/{id}/enable")
+    @PatchMapping("/{id}/enable")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
             summary = "Enable a user account",
@@ -334,7 +335,7 @@ public class UserController {
         return ResponseEntity.ok(ApiResponse.success("User enabled successfully", response));
     }
 
-    @PutMapping("/{id}/disable")
+    @PatchMapping("/{id}/disable")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(
             summary = "Disable a user account",
