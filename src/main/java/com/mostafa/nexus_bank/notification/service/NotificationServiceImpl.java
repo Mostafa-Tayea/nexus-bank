@@ -32,6 +32,7 @@ public class NotificationServiceImpl implements NotificationService {
 
     private final NotificationRepository notificationRepository;
     private final NotificationMapper notificationMapper;
+    private final EmailService emailService;
 
     @Override
     @Transactional
@@ -68,18 +69,55 @@ public class NotificationServiceImpl implements NotificationService {
 
         Notification saved = notificationRepository.save(notification);
 
-        try {
+        if (type == NotificationType.EMAIL) {
+            try {
+                String htmlBody = buildEmailHtml(title, message);
+                emailService.sendEmail(user.getEmail(), title, htmlBody);
+                saved.setStatus(NotificationStatus.SENT);
+                saved.setSentAt(LocalDateTime.now());
+                log.debug("Email notification sent to user: {}", user.getEmail());
+            } catch (Exception e) {
+                saved.setStatus(NotificationStatus.FAILED);
+                saved.setFailureReason(e.getMessage());
+                saved.setRetryCount(saved.getRetryCount() + 1);
+                log.error("Failed to send email notification to user: {}", user.getEmail(), e);
+            }
+        } else {
             saved.setStatus(NotificationStatus.SENT);
             saved.setSentAt(LocalDateTime.now());
-            log.debug("Notification sent to user: {} via {}", user.getEmail(), type);
-        } catch (Exception e) {
-            saved.setStatus(NotificationStatus.FAILED);
-            saved.setFailureReason(e.getMessage());
-            saved.setRetryCount(saved.getRetryCount() + 1);
-            log.error("Failed to send notification to user: {} via {}", user.getEmail(), type, e);
         }
 
         return notificationRepository.save(saved);
+    }
+
+    private String buildEmailHtml(String title, String message) {
+        return """
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <style>
+                        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+                        .container { max-width: 600px; margin: 20px auto; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+                        .header { background: #1a237e; color: #ffffff; padding: 24px; text-align: center; }
+                        .header h1 { margin: 0; font-size: 24px; }
+                        .body { padding: 32px; color: #333333; line-height: 1.6; }
+                        .body h2 { color: #1a237e; margin-top: 0; }
+                        .footer { background: #f4f4f4; color: #888888; padding: 16px; text-align: center; font-size: 12px; }
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <div class="header"><h1>Nexus Bank</h1></div>
+                        <div class="body">
+                            <h2>%s</h2>
+                            <p>%s</p>
+                        </div>
+                        <div class="footer">&copy; 2026 Nexus Bank. All rights reserved.</div>
+                    </div>
+                </body>
+                </html>
+                """.formatted(title, message);
     }
 
     @Override
